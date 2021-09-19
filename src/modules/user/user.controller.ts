@@ -12,7 +12,7 @@ import {
 
 import { UserService } from '@/modules/user/user.service';
 import { User } from '@/modules/schemas/user.schema';
-import { UserI } from '@/modules/interface/user.interface';
+import { UserI, UserRegisterI } from "@/modules/interface/user.interface";
 
 @Controller('user')
 export class UserController {
@@ -30,7 +30,7 @@ export class UserController {
 
   @Post()
   @HttpCode(HttpStatus.CREATED)
-  addUser(@Body() addUser: UserI): Promise<User> {
+  addUser(@Body() addUser: UserRegisterI): Promise<User> {
     console.log('test addUser', addUser);
     return this.userService.addUser(addUser);
   }

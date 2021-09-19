@@ -41,9 +41,9 @@ export class CategoriesController {
 
   @Put(':id')
   updateCategoryInfo(
-    @Body() updateUser: CategoriesI,
+    @Body() updateCategory: CategoriesI,
     @Param('id') id: string,
   ): Promise<Categories> {
-    return this.сategoriesService.updateCategory(id, updateUser);
+    return this.сategoriesService.updateCategory(id, updateCategory);
   }
 }

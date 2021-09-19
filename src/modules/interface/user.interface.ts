@@ -1,5 +1,23 @@
-export class UserI {
+export interface UserI {
   _id?: string;
-  readonly name: string;
-  readonly role: string;
+  role: string;
+  name: string;
+  email: string;
+  phone: string;
+  district: string;
+  street: string;
+  house: string;
+  flat: string;
+}
+
+export interface UserRegisterI {
+  role: string;
+  name: string;
+  email: string;
+  phone: string;
+  district: string;
+  street: string;
+  house: string;
+  flat: string;
+  password: string
 }

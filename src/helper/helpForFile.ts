@@ -1,4 +1,4 @@
-import { pathToUploadImg } from "@/config/mainConfig";
+import { pathToUploadImg } from '@/config/mainConfig';
 
 export class Helper {
   static customFileName(req, file, cb) {

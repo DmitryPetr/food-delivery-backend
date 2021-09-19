@@ -8,6 +8,9 @@ import { AppService } from '@/app.service';
 import { UserModule } from '@/modules/user/user.module';
 import { CategoriesModule } from '@/modules/categories/categories.module';
 import { ProductModule } from '@/modules/product/product.module';
+import { OrderController } from './modules/order/order.controller';
+import { OrderService } from './modules/order/order.service';
+import { OrderModule } from './modules/order/order.module';
 
 @Module({
   imports: [
@@ -18,6 +21,7 @@ import { ProductModule } from '@/modules/product/product.module';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'uploads'),
     }),
+    OrderModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,4 +1,4 @@
-export class ProductI {
+export interface ProductI {
   _id?: string;
   categoriesId: string;
   title: string;
@@ -7,6 +7,6 @@ export class ProductI {
   filePath?: string
 }
 
-export class ProductUploadImgI {
+export interface ProductUploadImgI {
   filePath: string
 }

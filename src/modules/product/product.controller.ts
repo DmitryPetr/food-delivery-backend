@@ -19,7 +19,7 @@ import { diskStorage } from "multer";
 import { Helper } from "@/helper/helpForFile";
 import { pathServerDev } from "@/config/mainConfig";
 
-  @Controller('product')
+@Controller('product')
 export class ProductController {
   constructor(private readonly productService: ProductService,
               ) {}
@@ -47,10 +47,10 @@ export class ProductController {
 
   @Put(':id')
   updateProductInfo(
-    @Body() updateUser: ProductI,
+    @Body() updateProduct: ProductI,
     @Param('id') id: string,
   ): Promise<Product> {
-    return this.productService.updateProduct(id, updateUser);
+    return this.productService.updateProduct(id, updateProduct);
   }
 
   @Put(':id/upload_img')
@@ -62,7 +62,6 @@ export class ProductController {
       }),
     }),
   )
-  //@UseInterceptors(FileInterceptor('files', { dest: '@/uploads/' }))
   uploadfile(@UploadedFile() files, @Param('id') id: string): Promise<Product> {
     const updateObj: ProductUploadImgI = {
       filePath: `${pathServerDev}/${files.newName}`

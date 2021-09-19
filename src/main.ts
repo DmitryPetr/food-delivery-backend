@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from '@/app.module';
-import { FRONTEND_APP_URL } from '@/config/mainConfig';
+import { FRONTEND_APP_URL, FRONTEND_SECURE_APP_URL } from '@/config/mainConfig';
 
-const whitelist = [FRONTEND_APP_URL];
+const whitelist = [FRONTEND_APP_URL, FRONTEND_SECURE_APP_URL];
 
 export const corsOptions = {
   credentials: true,
